@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background: url("/vbella/assets/background_img.png");
+  background: url("/assets/background_img.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -81,7 +81,7 @@ section {
   }
 
   &#products {
-    background: url("/vbella/assets/products-bg.jpg");
+    background: url("/assets/products-bg.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -539,7 +539,7 @@ button.menu-btn {
   overflow: hidden;
 
   .wrapper {
-    background: url("/vbella/assets/background_img.png");
+    background: url("/assets/background_img.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -550,7 +550,7 @@ button.menu-btn {
     box-sizing: border-box;
 
     &.covered {
-      background: url("/vbella/assets/diytailoring_edited.jpg");
+      background: url("/assets/diytailoring_edited.jpg");
       background-attachment: fixed;
       background-size: cover;
       background-repeat: no-repeat;
