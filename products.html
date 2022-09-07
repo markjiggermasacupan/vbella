@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBella</title>
+    <link rel="shortcut icon" href="/masacupan-valdeabella/assets/VBella.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/custom.css">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.11/dark.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/masacupan-valdeabella/assets/Toast.js-master/dist/css/Toast.css">
+
+</head>
+
+<body class="bg-dark">
+    <!-- top navbar -->
+    <div
+        class="navbar navbar-dark navbar-expand-lg bg-dark text-white shadow fixed-top flex-column w-100 main-nav pb-2">
+        <div class="container align-items-center justify-content-center ">
+
+            <a href="/masacupan-valdeabella/index.html" class="navbar-brand text-center me-lg-0 me-auto">
+                <img src="/masacupan-valdeabella/assets/VBella.png" class="img-logo" alt="">
+            </a>
+            <div class="dropdown d-block d-lg-none">
+                <a href="/masacupan-valdeabella/profile.html" class="profile-link nav-link text-white p-0"><i
+                        class="bx fs-2 bxs-user-circle"></i></a>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown" id="account-dropdown">
+                    <li>
+                        <p class="px-3 my-0 fw-bold text-dark d-flex align-items-center user-name"><i
+                                class="me-2 bx-sm bx bx-user-circle"></i> John Doe</p>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item link-dark" href="/masacupan-valdeabella/orders.html"><i class="bx bxs-truck me-2"></i>
+                            My Orders</a></li>
+                    <li><a class="dropdown-item link-dark log-out" href="#"><i class="bx bxs-log-out-circle me-2"></i>
+                            Log Out</a></li>
+                </ul>
+            </div>
+            <a href="#" role="button" data-open="false"
+                class="mobile-menu-btn d-block d-lg-none btn btn-link text-white"><i class="bx bx-menu bx-sm"></i></a>
+            <ul class="align navbar-nav flex-row flex-wrap justify-content-center d-none d-lg-flex me-lg-auto">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class="nav-link fs-6 text-uppercase text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/men.html" class=" fs-6 nav-link link-light">MEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/women.html" class="top-link nav-link link-light">WOMEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/kids.html" class=" fs-6 nav-link link-light">KIDS</a>
+                </li>
+                <!-- <li class="nav-item mx-lg-4 mx-3">
+                    <form action="#">
+                        <div class="input-group mb-3 rounded-0">
+                            <input type="text" class="form-control rounded-0" placeholder="Search..."
+                                aria-label="Text input with dropdown button">
+                            <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+                        </div>
+                    </form>
+                </li> -->
+
+            </ul>
+            <ul class="nav d-none d-lg-flex">
+                <li class="nav-item mx-lg-4 mx-3 p-0">
+                    <form action="#" class="search-form">
+                        <div class="input-group mb-3 rounded-0">
+                            <input type="text" class="form-control search-box rounded-0" placeholder="Search..."
+                                aria-label="Text input with dropdown button">
+                            <button class="btn btn-danger rounded-0" type="submit"><i class="bx bx-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="nav flex-row d-none d-lg-flex">
+                <li class="nav-item ms-2">
+                    <div class="dropdown">
+                        <a href="/masacupan-valdeabella/profile.html" class="profile-link nav-link text-white p-0"><i
+                                class="bx fs-2 bxs-user-circle"></i></a>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown"
+                            id="account-dropdown">
+                            <li>
+                                <p class="px-3 my-0 fw-bold text-dark d-flex align-items-center user-name"><i
+                                        class="me-2 bx-sm bx bx-user-circle"></i> John Doe</p>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item link-dark" href="/masacupan-valdeabella/orders.html"><i class="bx bxs-truck me-2"></i>
+                                    My Orders</a></li>
+                            <li><a class="dropdown-item link-dark log-out" href="#"><i
+                                        class="bx bxs-log-out-circle me-2"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item ms-2">
+                    <a href="/masacupan-valdeabella/cart.html" class="nav-link text-white p-0 position-relative"><i
+                            class="bx bxs-cart fs-2"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span class="cart-items-count">0</span>
+                            <span class="visually-hidden">Items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- mobile side menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-wrapper" id="mobile-side-menu">
+        <div class="mobile-menu text-white">
+            <header class=" text-end px-2 pt-3 pb-0">
+                <a href="#" role="button" aria-open="false"
+                    class="mobile-menu-btn d-block text-end d-lg-none btn btn-link text-white"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <form action="#" class="search-form">
+                <div class="input-group mb-3 rounded-0">
+                    <input type="text" class="form-control search-box rounded-0" placeholder="Search..."
+                        aria-label="Text input with dropdown button">
+                    <button class="btn btn-danger rounded-0" type="submit"><i class="bx bx-search"></i></button>
+                </div>
+            </form>
+            <hr>
+            <p class="ms-3"><small>Categories</small></p>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/men.html" class=" fs-6 fw-bolder nav-link link-light">MEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/women.html" class="fs-6 fw-bolder nav-link link-light">WOMEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/kids.html" class=" fs-6 fw-bolder nav-link link-light">KIDS</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/products.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Products</a>
+                </li>
+
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#about"
+                        class=" nav-link fs-6 text-uppercase  main-about-link fw-bolder text-white">About</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#contact-us" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Contact
+                        Us</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-row justify-content-around">
+                <!-- <li class="nav-item">
+                   
+                </li> -->
+                <li class="nav-item ms-2">
+                    <a href="/masacupan-valdeabella/cart.html" class="nav-link text-white p-0 position-relative"><i
+                            class="bx bxs-cart fs-2"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span class="cart-items-count">0</span>
+                            <span class="visually-hidden">Items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- filter menu -->
+    <div class="mobile-menu-wrapper" id="mobile-filter-menu">
+        <div class="mobile-menu text-white">
+            <header class="d-flex align-items-center justify-content-end px-2 pt-3 pb-0">
+                <a href="#" role="button" data-open="false" class="filter-btn link-light"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="p-3">
+                <p class="fs-5 fw-bold">Filters</p>
+                <form action="#">
+                    <div class="mb-2">
+                        <p class="text-white">Product Type</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input checked data-filter-target="#all-row"
+                                    class="form-check-input form-check-danger mobile-filters" type="radio"
+                                    name="productType" id="type-sm-0">
+                                <label class="form-check-label" for="type-sm-0">
+                                    All
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+
+                            <div class="form-check">
+                                <input data-filter-target="#cocoon-row" class="form-check-input mobile-filters"
+                                    type="radio" name="productType" id="type-sm-1">
+                                <label class="form-check-label" for="type-sm-1">
+                                    Cocoon
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input data-filter-target="#silk-row" class="form-check-input mobile-filters"
+                                    type="radio" name="productType" id="type-sm-2">
+                                <label class="form-check-label" for="type-sm-2">
+                                    Piña Silk
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- main content below -->
+    <main class="">
+        <!-- products section -->
+        <section id="products">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="category-title" data-aos="fade-up" data-aos-duration="1000">Our products</h2>
+                    <p data-aos="fade-up" data-aos-duration="1000">Check out our men's barong tagalog, accessories, and
+                        other Filipino-inspired clothing.</p>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md">
+                        <div class="row row-cols-1 row-cols-lg-3 gy-2 p-1 ">
+                            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                                data-aos-once="true">
+                                <div class="card rounded-0 product">
+                                    <div class="card-body ">
+                                        <div class="text-center">
+                                            <img src="/masacupan-valdeabella/products/men/Barongtag4.jpg"
+                                                alt="" class="img-fluid">
+                                            <p class="text-dark mt-2 mb-0">Barong Tagalog 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                                data-aos-once="true">
+                                <div class="card rounded-0  product">
+                                    <div class="card-body ">
+                                        <div class="text-center">
+                                            <img src="/masacupan-valdeabella/products/men/Barongtag2.jpg"
+                                                alt="" class="img-fluid">
+                                            <p class="text-dark mt-2 mb-1">Barong Tagalog 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                                data-aos-once="true">
+                                <div class="card rounded-0 product ">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="/masacupan-valdeabella/products/women/Filipiniana.jpg"
+                                                alt="" class="img-fluid">
+                                            <p class="text-dark mt-2 mb-1">Filipiniana</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                                data-aos-once="true">
+                                <div class="card rounded-0 product ">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="/masacupan-valdeabella/products/women/LadiesBarong.jpg"
+                                                alt="" class="img-fluid">
+                                            <p class="text-dark mt-2 mb-1">Ladies Barong</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                                data-aos-once="true">
+                                <div class="card rounded-0 product ">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="/masacupan-valdeabella/products/kids/Christeningbarong.jpg"
+                                                alt="" class="img-fluid">
+                                            <p class="text-dark mt-2 mb-1">Christening Barong Men</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                                data-aos-once="true">
+                                <div class="card rounded-0 product ">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="/masacupan-valdeabella/products/kids/Christeningdress2.jpg"
+                                                alt="" class="img-fluid">
+                                            <p class="text-dark mt-2 mb-1">Christening Barong Women</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- login modal -->
+    <div class="modal fade" tabindex="-1" id="login-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-top border-dark border-5 rounded-0 bg-light">
+                <div class="modal-header border-0 mb-0 pb-3">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-11 login-form ">
+                            <h5 class="text-info fw-bolder mb-2">Login To My Account</h5>
+                            <p>Enter your email address and password</p>
+                            <hr>
+                            <form action="#" method="post" id="login-form">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="email" class="form-control email" placeholder="Email address...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Password</label>
+                                    <input type="password" class="form-control password" placeholder="Password...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="submit">LOGIN</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/signup.html" class="link-primary">Create your account</a>
+                                    </p>
+                                    <p>Lost Password? <a href="#" class="link-primary reset-pass">Recover Password</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-11 reset-form d-none">
+                            <h5 class="text-danger fw-bolder mb-2">Recover My Password</h5>
+                            <p>Enter the email address that you use for your account</p>
+                            <hr>
+                            <form action="#">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="Email address...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="button">Recover Password</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/signup.html" class="link-primary">Create your account</a>
+                                    </p>
+                                    <p>Login Account? <a href="#" class="link-primary login-account">Click here</a></p>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/masacupan-valdeabella/assets/Toast.js-master/dist/js/Toast.js"></script>
+    <script src="/masacupan-valdeabella/scripts/backend.js"></script>
+    <script src="/masacupan-valdeabella/assets/jquery2d.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+        integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/masacupan-valdeabella/assets/quicksand.js"></script>
+    <script src="/masacupan-valdeabella/scripts/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

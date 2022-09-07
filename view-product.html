@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBella</title>
+    <link rel="shortcut icon" href="/masacupan-valdeabella/assets/VBella.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/custom.css">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/style.css">
+
+</head>
+
+<body class="bg-dark preloader-open">
+    <!-- top navbar -->
+    <div
+        class="navbar navbar-dark navbar-expand-lg bg-dark text-white shadow fixed-top flex-column w-100 main-nav pb-0">
+        <div class="container  justify-content-center ">
+
+            <a href="/masacupan-valdeabella/index.html" class="navbar-brand text-center me-auto ">
+                <img src="/masacupan-valdeabella/assets/VBella.png" class="img-logo" alt="">
+            </a>
+            <a href="#login-modal" data-bs-toggle="modal" class="d-block d-lg-none btn btn-link text-white px-0"><i
+                    class="bx bxs-user-circle fs-2"></i></a>
+            <a href="#" role="button" data-open="false"
+                class="mobile-menu-btn d-block d-lg-none btn btn-link text-white"><i class="bx bx-menu bx-sm"></i></a>
+            <ul class="align-self-end navbar-nav flex-row flex-wrap justify-content-center d-none d-lg-flex me-lg-auto">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class="nav-link fs-6 text-uppercase text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <form action="#">
+                        <div class="input-group mb-3 rounded-0">
+                            <input type="text" class="form-control rounded-0" placeholder="Search..."
+                                aria-label="Text input with dropdown button">
+                            <button class="btn btn-light rounded-0 border-start" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">All Categories <i class="bx bx-chevron-down"></i></button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">All Categories</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="#">Barong Tagalog</a></li>
+                                <li><a class="dropdown-item" href="#">Barong Tagalog</a></li>
+                                <li><a class="dropdown-item" href="#">Blazer</a></li>
+                                <li><a class="dropdown-item" href="#">Blouse</a></li>
+                            </ul>
+                            <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+
+            </ul>
+            <ul class="nav flex-row d-none d-lg-flex">
+                <li class="nav-item me-2">
+                    <div class="language-dropdown">
+                        <a class="btn btn-light btn-sm p-1 rounded-0 toggler" href="#" role="button"
+                            aria-expanded="false">
+                            <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20" alt="">
+                        </a>
+                        <ul class="bg-white position-absolute">
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item ms-2">
+                    <a href="#login-modal" data-bs-toggle="modal" class="nav-link text-white p-0"><i
+                            class="bx fs-2 bxs-user-circle"></i></a>
+                </li>
+                <li class="nav-item ms-2">
+                    <a href="#" class="nav-link text-white p-0"><i class="bx bxs-cart fs-2"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- nav footer -->
+        <div class="w-100 pt-lg-2 pb-0 mt-lg-3 ">
+            <div class="container pb-0">
+                <div class="text-center d-block d-lg-none pb-3">
+                    <a role="button" href="#" class="py-0 link-light category-btn d-flex flex-column" data-open="false"
+                        type="button">
+                        <i class="bx bx-sm bx-chevron-up"></i>
+                    </a>
+                </div>
+                <!-- desktop category menu -->
+                <div class="d-none d-md-block">
+                    <ul class="nav categories-nav">
+                        <li class="nav-item ">
+                            <a href="/masacupan-valdeabella/men.html" class="top-link nav-link link-light">MEN <i
+                                    class="bx bx-chevron-down"></i></a>
+                            <div class="menu-wrapper">
+                                <ul class="menu">
+                                    <span class="arrow"></span>
+
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/masacupan-valdeabella/women.html" class="top-link nav-link link-light">WOMEN <i
+                                    class="bx bx-chevron-down"></i></a>
+                            <div class="menu-wrapper">
+                                <ul class="menu">
+                                    <span class="arrow"></span>
+
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/masacupan-valdeabella/kids.html" class="top-link nav-link link-light">KIDS <i
+                                    class="bx bx-chevron-down"></i></a>
+                            <div class="menu-wrapper">
+                                <ul class="menu">
+                                    <span class="arrow"></span>
+
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="top-link nav-link link-light">WEDDING <i
+                                    class="bx bx-chevron-down"></i></a>
+                            <div class="menu-wrapper">
+                                <ul class="menu">
+                                    <span class="arrow"></span>
+
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="top-link nav-link link-light">FILIPINO GOODS <i
+                                    class="bx bx-chevron-down"></i></a>
+                            <div class="menu-wrapper">
+                                <ul class="menu">
+                                    <span class="arrow"></span>
+
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="top-link nav-link link-light">SIZE CHARTS <i
+                                    class="bx bx-chevron-down"></i></a>
+                            <div class="menu-wrapper">
+                                <ul class="menu">
+                                    <span class="arrow"></span>
+
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link link-light">Formal Barong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- mobile category menu -->
+                <div class="mobile-categories-wrapper" id="mobile-category-menu">
+                    <div class="top-arrow"></div>
+                    <ul class="nav mobile-categories-nav flex-column ">
+                        <li class="nav-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="/masacupan-valdeabella/men.html" class="nav-link link-light">MEN</a>
+                                <a href="#men-menu" role="button" data-bs-toggle="collapse" class="p-0 link-light"><i
+                                        class="bx bx-chevron-down"></i></a>
+                            </div>
+                            <ul class="nav collapse" id="men-menu">
+                                <span class="arrow"></span>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="/masacupan-valdeabella/women.html" class="nav-link link-light">WOMEN</a>
+                                <a href="#women-menu" role="button" data-bs-toggle="collapse" class="p-0 link-light"><i
+                                        class="bx bx-chevron-down"></i></a>
+                            </div>
+                            <ul class="nav collapse" id="women-menu">
+                                <span class="arrow"></span>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="/masacupan-valdeabella/kids.html" class="nav-link link-light">KIDS</a>
+                                <a href="#kids-menu" role="button" data-bs-toggle="collapse" class="p-0 link-light"><i
+                                        class="bx bx-chevron-down"></i></a>
+                            </div>
+                            <ul class="nav collapse" id="kids-menu">
+                                <span class="arrow"></span>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="nav-link link-light">WEDDING</a>
+                                <a href="#wedding-menu" role="button" data-bs-toggle="collapse"
+                                    class="p-0 link-light"><i class="bx bx-chevron-down"></i></a>
+                            </div>
+                            <ul class="nav collapse" id="wedding-menu">
+                                <span class="arrow"></span>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="nav-link link-light">FILIPINO GOODS</a>
+                                <a href="#filipino-goods-menu" role="button" data-bs-toggle="collapse"
+                                    class="p-0 link-light"><i class="bx bx-chevron-down"></i></a>
+                            </div>
+                            <ul class="nav collapse" id="filipino-goods-menu">
+                                <span class="arrow"></span>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="nav-link link-light">SIZE CHARTS</a>
+                                <a href="#size-menu" role="button" data-bs-toggle="collapse" class="p-0 link-light"><i
+                                        class="bx bx-chevron-down"></i></a>
+                            </div>
+                            <ul class="nav collapse" id="size-menu">
+                                <span class="arrow"></span>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link-light"><i class="bx bx-chevron-right me-1"></i>
+                                        Formal Barong</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile side menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-wrapper" id="mobile-side-menu">
+        <div class="mobile-menu text-white">
+            <header class=" text-end px-2 pt-3 pb-0">
+                <a href="#" role="button" aria-open="false"
+                    class="mobile-menu-btn d-block text-end d-lg-none btn btn-link text-white"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="input-group mb-3 rounded-0 px-2">
+                <input type="text" class="form-control rounded-0" placeholder="Search..."
+                    aria-label="Text input with dropdown button">
+                <button class="btn btn-light rounded-0 border-start" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="bx bx-chevron-down"></i></button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">All Categories</a></li>
+                    <li><a class="dropdown-item" href="#">Accessories</a></li>
+                    <li><a class="dropdown-item" href="#">Barong Tagalog</a></li>
+                    <li><a class="dropdown-item" href="#">Barong Tagalog</a></li>
+                    <li><a class="dropdown-item" href="#">Blazer</a></li>
+                    <li><a class="dropdown-item" href="#">Blouse</a></li>
+                </ul>
+                <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+            </div>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/products.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Products</a>
+                </li>
+
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#about"
+                        class=" nav-link fs-6 text-uppercase  main-about-link fw-bolder text-white">About</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#contact-us" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Contact
+                        Us</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-row justify-content-around">
+                <li class="nav-item">
+                    <div class="language-dropdown">
+                        <a class="btn btn-light btn-sm p-1 rounded-0 toggler" href="#" role="button"
+                            aria-expanded="false">
+                            <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20" alt="">
+                        </a>
+                        <ul class="bg-white position-absolute">
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                   
+                </li> -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white p-0"><i class="bx bxs-cart fs-2"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- filter menu -->
+    <div class="mobile-menu-wrapper" id="mobile-filter-menu">
+        <div class="mobile-menu text-white">
+            <header class="d-flex align-items-center justify-content-end px-2 pt-3 pb-0">
+                <a href="#" role="button" data-open="false" class="filter-btn link-light"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="p-3">
+                <p class="fs-5 fw-bold">Filters</p>
+                <form action="#">
+                    <div class="mb-4">
+                        <p class="text-white-50">Availability</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" name="availability" type="checkbox" value=""
+                                    id="in-stock">
+                                <label class="form-check-label" for="in-stock">
+                                    In stock (120)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" name="availability" type="checkbox" value=""
+                                    id="out-stock">
+                                <label class="form-check-label" for="out-stock">
+                                    Out of stock (50)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <p class="text-white-50">Product Type</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="type-1">
+                                <label class="form-check-label" for="type-1">
+                                    Barong Tagalog(103)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="type-2">
+                                <label class="form-check-label" for="type-2">
+                                    Handicrafts(4)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="type-3">
+                                <label class="form-check-label" for="type-3">
+                                    Women's Barong(8)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="type-4">
+                                <label class="form-check-label" for="type-4">
+                                    Women's Set(3)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="type-4">
+                                <label class="form-check-label" for="type-4">
+                                    Women's Set(3)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- main content below -->
+    <main class="">
+        <!-- products section -->
+        <section id="products">
+            <div class="container">
+                <div class="row align-items-center gx-2 gy-3 px-3 justify-content-center">
+                    <div class="col-lg-7 order-lg-0 order-1">
+                        <!-- product slider -->
+                        <div class="product-slider row align-items-center justify-content-center gy-0"
+                            id="hero-product-slider">
+                            <div class="col-lg-2 col-7 order-lg-0 order-1" data-aos="fade-right"
+                                data-aos-duration="1000" data-aos-once="true">
+                                <div
+                                    class="products row row-cols-lg-1 row-cols-3 justify-content-center align-items-center ">
+                                    <div class="mb-3">
+                                        <a href="#" data-slide="0">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <img src="/masacupan-valdeabella/assets/grey.png"
+                                                        alt="" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="#" data-slide="1">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <img src="/masacupan-valdeabella/assets/grey.png"
+                                                        alt="" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="#" data-slide="2">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <img src="/masacupan-valdeabella/assets/grey.png"
+                                                        alt="" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 order-lg-1 order-0">
+                                <div class="slider" data-aos="zoom-in" data-aos-duration="800" data-aos-once="true">
+                                    <div class="slides">
+                                        <div class="slide active">
+                                            <img src="/masacupan-valdeabella/products/men/BrownBarong front and back/BarongbrownW.jpg"
+                                                alt="" class="">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="/masacupan-valdeabella/products/women/Filipiniana.jpg"
+                                                alt="" class="">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="/masacupan-valdeabella/products/kids/Christeningbarong.jpg"
+                                                alt="" class="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg order-2" data-aos="fade-down" data-aos-once="true" data-aos-duration="1000"
+                        data-aos-once="true">
+                        <div class="text-white">
+                            <h2 id="product-name">MEN'S BARONG</h2>
+                            <p class="text-light my-1" id="category"><small>Category: Regular Person</small></p>
+                            <p class="text-light my-1"><small>Tags: Barong, Lumban</small></p>
+                            <p class="mt-4 fs-5" id="description"><i>Lorem Ipsum is simply dummy text of the printing
+                                    and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s.</i></p>
+                            <h5 class="mb-4" id="price">$14.00</h5>
+                            <div class="btn-group btn-group-sm quantity-group my-1" role="group"
+                                aria-label="Basic example">
+                                <button type="button" class="btn btn-light fw-bold rounded-0"><i
+                                        class="bi-dash fs-5"></i></button>
+                                <input type="text name="" class=" form-control form-control-sm rounded-0 text-center"
+                                    value="1">
+                                <button type="button" class="btn btn-light fw-bold rounded-0"><i
+                                        class="bi-plus fs-5"></i></button>
+                            </div>
+                            <button type="button" class="btn btn-danger rounded-0 my-1 ms-2">ADD TO CART <i
+                                    class="bi-cart-plus-fill"></i></button>
+                            <h6 class="description-label mt-5">DESCRIPTION</h6>
+                            <p>We have many options on product edit, it is flexible. For example you can change product
+                                padding relatively to it's holder box A.</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- login modal -->
+    <div class="modal fade" tabindex="-1" id="login-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-top border-dark border-5 rounded-0 bg-light">
+                <div class="modal-header border-0 mb-0 pb-3">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-11 login-form ">
+                            <h5 class="text-danger fw-bolder mb-2">Login To My Account</h5>
+                            <p>Enter your email address and password</p>
+                            <hr>
+                            <form action="#">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="Email address...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Password</label>
+                                    <input type="text" class="form-control" placeholder="Password...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="button">LOGIN</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/index.html#create-account" class="link-primary">Create
+                                            your account</a></p>
+                                    <p>Lost Password? <a href="#" class="link-primary reset-pass">Recover Password</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-11 reset-form d-none">
+                            <h5 class="text-danger fw-bolder mb-2">Recover My Password</h5>
+                            <p>Enter the email address that you use for your account</p>
+                            <hr>
+                            <form action="#">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="Email address...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="button">Recover Password</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/index.html#create-account" class="link-primary">Create
+                                            your account</a></p>
+                                    <p>Login Account? <a href="#" class="link-primary login-account">Click here</a></p>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- preloader -->
+    <div class="page-preloader" role="document" id="page-preloader">
+        <div class="wrapper">
+            <div class="preloader text-center ">
+                <img src="/masacupan-valdeabella/assets/VBella.png" alt="" width="100">
+
+                <p class="text-white-50 mt-3">Just a moment, please wait... </p>
+                <div class="spinner-border spinner-border-sm text-white-50 mt-1" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="/masacupan-valdeabella/scripts/backend.js"></script>
+    <script src="/masacupan-valdeabella/scripts/main.js"></script>
+    <script>
+        AOS.init();
+        async function loadProduct() {
+            let id = localStorage.getItem("view-product-id")
+            if (id == null || id == undefined) {
+                location.href = "products.html"
+            }
+            const product = await findProduct(id);
+            console.log(product)
+            if (product.data) {
+                closePreloader();
+
+                console.log("product: ", product.data[0])
+
+                //add product slider slides
+                const slider = $(".product-slider .slider");
+                const slides = $(".product-slider .slides");
+                //clear slides first
+                slides.html("")
+                $(".product-slider .products").html("")
+                let i = 0
+                for (let img of product.data[0].product_images) {
+                    let p = `
+                        <div class="mb-3">
+                            <a href="#" data-slide="${i}">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <img src="${img.src}"
+                                            alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                         `
+                    let slide = `
+                         <div class="slide ${i == 0 ? "active" : ""}">
+                             <img src="${img.src}"
+                                 alt="" class="">
+                         </div>`
+                    slides.append(slide);
+                    $(".product-slider .products").append(p);
+
+                    i++;
+                }
+
+                const products = $(".product-slider .products a");
+                var slideIndex = 0;
+                products.on("click", function (e) {
+                    e.preventDefault();
+                    slideTo($(this).data("slide"));
+
+                })
+
+                function slideTo(index) {
+                    console.log(index)
+                    let width = $(".slides").width();
+                    $(".slides .slide").removeClass("active");
+                    $($(".slides .slide")[index]).addClass("active")
+                    slides[0].style.left = index * -(width / 3) + "px";
+                }
+            } else {
+                console.log("products.error: ", products.error)
+            }
+        }
+        $(function () {
+            loadProduct();
+        })
+
+
+    </script>
+</body>
+
+</html>

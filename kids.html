@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBella</title>
+    <link rel="shortcut icon" href="/masacupan-valdeabella/assets/VBella.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/custom.css">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.11/dark.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/masacupan-valdeabella/assets/Toast.js-master/dist/css/Toast.css">
+
+</head>
+
+<body class="bg-dark preloader-open">
+    <!-- top navbar -->
+    <div
+        class="navbar navbar-dark navbar-expand-lg bg-dark text-white shadow fixed-top flex-column w-100 main-nav pb-2">
+        <div class="container align-items-center justify-content-center ">
+
+            <a href="/masacupan-valdeabella/index.html" class="navbar-brand text-center me-lg-0 me-auto">
+                <img src="/masacupan-valdeabella/assets/VBella.png" class="img-logo" alt="">
+            </a>
+            <div class="dropdown d-block d-lg-none">
+                <a href="/masacupan-valdeabella/profile.html" class="profile-link nav-link text-white p-0"><i
+                        class="bx fs-2 bxs-user-circle"></i></a>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown">
+                    <li>
+                        <p class="px-3 my-0 fw-bold text-dark d-flex align-items-center user-name"><i
+                                class="me-2 bx-sm bx bx-user-circle"></i> John Doe</p>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item link-dark" href="/masacupan-valdeabella/orders.html"><i class="bx bxs-truck me-2"></i>
+                            My Orders</a></li>
+                    <li><a class="dropdown-item link-dark log-out" href="#"><i class="bx bxs-log-out-circle me-2"></i>
+                            Log Out</a></li>
+                </ul>
+            </div>
+            <a href="#" role="button" data-open="false"
+                class="mobile-menu-btn d-block d-lg-none btn btn-link text-white"><i class="bx bx-menu bx-sm"></i></a>
+            <ul class="align navbar-nav flex-row flex-wrap justify-content-center d-none d-lg-flex me-lg-auto">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class="nav-link fs-6 text-uppercase text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/men.html" class=" fs-6 nav-link link-light">MEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/women.html" class="top-link nav-link link-light">WOMEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/kids.html" class=" fs-6 nav-link link-light">KIDS</a>
+                </li>
+            </ul>
+            <ul class="nav d-none d-lg-flex">
+                <li class="nav-item mx-lg-4 mx-3 p-0">
+                    <form action="#" class="search-form">
+                        <div class="input-group mb-3 rounded-0">
+                            <input type="text" class="search-box form-control rounded-0" placeholder="Search..."
+                                aria-label="Text input with dropdown button" required>
+                            <button class="btn btn-danger rounded-0" type="submit"><i class="bx bx-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="nav flex-row d-none d-lg-flex">
+                <li class="nav-item ms-2">
+                    <div class="dropdown">
+                        <a href="/masacupan-valdeabella/profile.html" class="profile-link nav-link text-white p-0"><i
+                                class="bx fs-2 bxs-user-circle"></i></a>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown"
+                            id="account-dropdown">
+                            <li>
+                                <p class="px-3 my-0 fw-bold text-dark d-flex align-items-center user-name"><i
+                                        class="me-2 bx-sm bx bx-user-circle"></i> John Doe</p>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item link-dark" href="/masacupan-valdeabella/orders.html"><i class="bx bxs-truck me-2"></i>
+                                    My Orders</a></li>
+                            <li><a class="dropdown-item link-dark log-out" href="#"><i
+                                        class="bx bxs-log-out-circle me-2"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item ms-2">
+                    <a href="/masacupan-valdeabella/cart.html" class="cart-link nav-link text-white p-0 position-relative"><i
+                            class="bx bxs-cart fs-2"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span class="cart-items-count">0</span>
+                            <span class="visually-hidden">Items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- mobile side menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-wrapper" id="mobile-side-menu">
+        <div class="mobile-menu text-white">
+            <header class=" text-end px-2 pt-3 pb-0">
+                <a href="#" role="button" aria-open="false"
+                    class="mobile-menu-btn d-block text-end d-lg-none btn btn-link text-white"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="input-group mb-3 rounded-0 px-2">
+                <input type="text" class="form-control rounded-0" placeholder="Search..."
+                    aria-label="Text input with dropdown button">
+
+                <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+            </div>
+            <hr>
+            <p class="ms-3"><small>Categories</small></p>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/men.html" class=" fs-6 fw-bolder nav-link link-light">MEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/women.html" class="fs-6 fw-bolder nav-link link-light">WOMEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/kids.html" class=" fs-6 fw-bolder nav-link link-light">KIDS</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/products.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Products</a>
+                </li>
+
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#about"
+                        class=" nav-link fs-6 text-uppercase  main-about-link fw-bolder text-white">About</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#contact-us" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Contact
+                        Us</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-row justify-content-around">
+                <li class="nav-item">
+                    <div class="language-dropdown">
+                        <a class="btn btn-light btn-sm p-1 rounded-0 toggler" href="#" role="button"
+                            aria-expanded="false">
+                            <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20" alt="">
+                        </a>
+                        <ul class="bg-white position-absolute">
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                   
+                </li> -->
+                <li class="nav-item ms-2">
+                    <a href="/masacupan-valdeabella/cart.html" class="cart-link nav-link text-white p-0 position-relative"><i
+                            class="bx bxs-cart fs-2"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span class="cart-items-count">0</span>
+                            <span class="visually-hidden">Items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- filter menu -->
+    <div class="mobile-menu-wrapper" id="mobile-filter-menu">
+        <div class="mobile-menu text-white">
+            <header class="d-flex align-items-center justify-content-end px-2 pt-3 pb-0">
+                <a href="#" role="button" data-open="false" class="filter-btn link-light"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="p-3">
+                <p class="fs-5 fw-bold">Filters</p>
+                <form action="#">
+                    <div class="mb-2">
+                        <p class="text-white">Sort by price</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input data-sort="ascending" checked data-sort-target="#ascending-row"
+                                    class="form-check-input" type="radio" name="sortBy" id="sort-sm-0">
+                                <label class="form-check-label" for="sort-sm-0">
+                                    <i class='bx bx-up-arrow-alt'></i> Lowest - Highest
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input data-sort="descending" data-sort-target="#descending-row"
+                                    class="form-check-input" type="radio" name="sortBy" id="sort-sm-1">
+                                <label class="form-check-label" for="sort-sm-1">
+                                    <i class='bx bx-down-arrow-alt'></i> Highest - Lowest
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <p class="text-white">Product Type</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input data-type="all" checked data-filter-target="#all-row"
+                                    class="form-check-input form-check-danger mobile-filters" type="radio"
+                                    name="productType" id="type-sm-0">
+                                <label class="form-check-label" for="type-sm-0">
+                                    All
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+
+                            <div class="form-check">
+                                <input data-type="Organza" data-filter-target="#organza-row"
+                                    class="form-check-input mobile-filters" type="radio" name="productType"
+                                    id="type-sm-1">
+                                <label class="form-check-label" for="type-sm-1">
+                                    Organza
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input data-type="Piña" data-filter-target="#pina-row"
+                                    class="form-check-input mobile-filters" type="radio" name="productType"
+                                    id="type-sm-2">
+                                <label class="form-check-label" for="type-sm-2">
+                                    Piña
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- main content below -->
+    <main class="">
+        <!-- products section -->
+        <section id="products">
+            <div class="container">
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="category-title">SHOP KIDS</h2>
+                    <p>Check out our men's barong tagalog, accessories, and other Filipino-inspired clothing.</p>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-2 p-3 bg-white text-dark border-start border-5 border-danger d-none d-md-block">
+                        <!-- filters desktop view -->
+                        <div class="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-aos-once="true">
+                            <p class="fs-5 fw-bold">Filters</p>
+                            <form action="#">
+                                <div class="mb-2">
+                                    <p class="text-danger">Sort by price</p>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input data-sort="ascending" checked data-sort-target="#ascending-row"
+                                                class="form-check-input" type="radio" name="sortBy" id="sort-lg-0">
+                                            <label class="form-check-label" for="sort-lg-0">
+                                                <i class='bx bx-up-arrow-alt'></i> Lowest - Highest
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input data-sort="descending" data-sort-target="#descending-row"
+                                                class="form-check-input" type="radio" name="sortBy" id="sort-lg-1">
+                                            <label class="form-check-label" for="sort-lg-1">
+                                                <i class='bx bx-down-arrow-alt'></i> Highest - Lowest
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <p class="text-danger">Product Type</p>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input data-type="all" checked data-filter-target="#all-row"
+                                                class="form-check-input" type="radio" name="productType" id="type-lg-0">
+                                            <label class="form-check-label" for="type-lg-0">
+                                                All
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+
+                                        <div class="form-check">
+                                            <input data-type="Organza" data-filter-target="#organza-row"
+                                                class="form-check-input" type="radio" name="productType" id="type-lg-1">
+                                            <label class="form-check-label" for="type-lg-1">
+                                                Organza
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input data-type="Piña" data-filter-target="#pina-row"
+                                                class="form-check-input" type="radio" name="productType" id="type-lg-2">
+                                            <label class="form-check-label" for="type-lg-2">
+                                                Piña
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- filters mobile view -->
+                        <div class="d-block d-md-none p-2 text-end">
+                            <a href="#" role="button" class="text-end link-dark d-flex align-items-center"><i
+                                    class="bx bx-filter-alt bx-sm me-2"></i>
+                                Filter</a>
+                        </div>
+                    </div>
+                    <div class="col-md position-relative">
+
+                        <div class="bg-white shadow border-top border-5 border-dark position-relative pb-4">
+                            <!-- preloader -->
+                            <div class="sub-preloader">
+                                <div class="content text-center">
+                                    <div class="">
+                                        <div class="spinner-border spinner-border-lg text-white-50 mt-1" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                        <p class="text-white-50 ">Please wait... </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- filter menu for mobile -->
+                            <div class="row shadow-sm d-flex d-lg-none">
+                                <div class="col-6 px-3 pt-3">
+                                    <a href="#" role="button" data-open="false"
+                                        class="filter-btn text-end link-danger d-flex align-items-center"><i
+                                            class="bx bx-filter-alt bx-sm me-2 "></i>
+                                        Filter</a>
+                                </div>
+                            </div>
+                            <div class="products-row row gx-1 gy-0 p-1" id="products-row">
+
+                            </div>
+
+                            <!-- product filters row -->
+                            <!-- Organza -->
+                            <div class="products-row row gx-1 gy-0 p-1 d-none" id="organza-row">
+
+                            </div>
+                            <!-- pina silk -->
+                            <div class="products-row row gx-1 gy-0 p-1 d-none" id="silk-row">
+
+                            </div>
+                            <!-- all products -->
+                            <div class="products-row row gx-1 gy-0 p-1 d-none" id="all-row">
+
+                            </div>
+                            <!-- asc products -->
+                            <div class="products-row row gx-1 gy-0 p-1 d-none" id="ascending-row">
+
+                            </div>
+                            <!-- desc products -->
+                            <div class="products-row row gx-1 gy-0 p-1 d-none" id="descending-row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- confirm modal -->
+            <div class="modal" id="confirm-modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-body">
+                            <h5 class="title"></h5>
+                            <p class="message">Modal body text goes here.</p>
+
+                            <div class="modal-footer border-0">
+                                <button class="confirm btn btn-danger" type="button">Confirm</button>
+                                <button class="cancel btn btn-dark" type="button">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- view modal -->
+            <div class="modal fade" tabindex="-1" id="view-modal">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content border-top border-dark bg-dark border-5 rounded-0 bg-light">
+                        <div class="modal-header border-0 mb-0 pb-3">
+                            <div class="text-end w-100">
+                                <button type="button" class="btn btn-link text-white text-decoration-none "
+                                    data-bs-dismiss="modal" aria-label="Close"><i class="bx bx-x bx-sm"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-body position-relative">
+                            <div class="sub-preloader">
+                                <div class="content text-center">
+                                    <div class="">
+                                        <div class="spinner-border spinner-border-lg text-white-50 mt-1" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                        <p class="text-white-50 ">Please wait... </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center gx-2 gy-3 px-3 justify-content-center">
+                                <div class="col-lg-7 order-lg-0 order-1">
+                                    <!-- product slider -->
+                                    <div class="product-slider row align-items-center justify-content-center gy-2"
+                                        id="hero-product-slider">
+                                        <div class="col-lg-2 col-7 order-lg-0 mt-0 mt-md-3 order-1"
+                                            data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                                            <div
+                                                class="products row row-cols-lg-1 row-cols-3 justify-content-center align-items-center ">
+                                                <div class="mb-3 placeholder">
+                                                    <a href="#" data-slide="0" class="placeholder placeholder-wave">
+                                                        <div class="card">
+                                                            <div class="card-body p-0">
+                                                                <img src="/masacupan-valdeabella/assets/grey.png" alt="" class="img-fluid">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-3 placeholder">
+                                                    <a href="#" data-slide="1" class="placeholder placeholder-wave">
+                                                        <div class="card">
+                                                            <div class="card-body p-0">
+                                                                <img src="/masacupan-valdeabella/assets/grey.png" alt="" class="img-fluid">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-3 placeholder">
+                                                    <a href="#" data-slide="2" class="placeholder placeholder-wave">
+                                                        <div class="card">
+                                                            <div class="card-body p-0">
+                                                                <img src="/masacupan-valdeabella/assets/grey.png" alt="" class="img-fluid">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9 order-lg-1 order-0 py-0 py-md-3">
+                                            <div class="slider" data-aos="zoom-in" data-aos-duration="800"
+                                                data-aos-once="true">
+                                                <div class="slides">
+                                                    <div class="slide active placeholder">
+                                                        <img src="/masacupan-valdeabella/assets/p.jpg" alt=""
+                                                            class="placeholder placeholder-wave">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg order-2" data-aos="fade-down" data-aos-once="true"
+                                    data-aos-duration="1000" data-aos-once="true">
+                                    <div class="text-white ">
+                                        <form action="#" id="add-to-cart-form">
+                                            <input type="hidden" class="user-id">
+                                            <input type="hidden" class="product-id">
+
+                                            <h2><span class="placeholder-wave placeholder col-7"></span> <span
+                                                    id="product-name"></span></h2>
+                                            <p class="text-white-50 my-1"><small><span
+                                                        class="placeholder-wave placeholder col-7"></span> <span
+                                                        id="category"></span>, 
+                                                        <span class="ms-1"
+                                                        id="type"></span>
+                                                    </small>
+                                            </p>
+                                            <p class="text-light my-1"><small><span
+                                                        class="placeholder-wave placeholder col-7"></span></small></p>
+
+                                            <h5 class="mb-4 mt-5"><span
+                                                    class="placeholder-wave placeholder col-7"></span><span
+                                                    id="price"></span></h5>
+                                            <div class="btn-group btn-group-sm quantity-group my-1" role="group"
+                                                aria-label="Basic example">
+                                                <button type="button"
+                                                    class="btn btn-light fw-bold rounded-0 quantity-down"><i
+                                                        class="bi-dash fs-5"></i></button>
+                                                <input type="number" readonly name="" min="1" id="quantity-box" class="form-control form-control-sm rounded-0
+                                                             text-center" value="1">
+                                                <button type="button"
+                                                    class="btn btn-light fw-bold rounded-0 quantity-up"><i
+                                                        class="bi-plus fs-5"></i></button>
+                                            </div>
+                                            <button type="submit" class="btn btn-danger rounded-0 my-1 ms-2">ADD TO CART
+                                                <i class="bi-cart-plus-fill"></i></button>
+                                        </form>
+                                        <h6 class="description-label mt-5">DESCRIPTION</h6>
+                                        <p class="mt-4 fs-6 text-center"><i><span
+                                                    class="placeholder-wave placeholder col-12"></span><span
+                                                    id="description"></span></i></p>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- login modal -->
+    <div class="modal fade" tabindex="-1" id="login-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-top border-dark border-5 rounded-0 bg-light">
+                <div class="modal-header border-0 mb-0 pb-3">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-11 login-form ">
+                            <h5 class="text-info fw-bolder mb-2">Login To My Account</h5>
+                            <p>Enter your email address and password</p>
+                            <hr>
+                            <form action="#" method="post" id="login-form">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="email" class="form-control email" placeholder="Email address...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Password</label>
+                                    <input type="password" class="form-control password" placeholder="Password...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="submit">LOGIN</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/signup.html"
+                                            class="link-primary">Create your account</a></p>
+                                    <p>Lost Password? <a href="#" class="link-primary reset-pass">Recover Password</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-11 reset-form d-none">
+                            <h5 class="text-danger fw-bolder mb-2">Recover My Password</h5>
+                            <p>Enter the email address that you use for your account</p>
+                            <hr>
+                            <form action="#">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="Email address...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="button">Recover Password</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/signup.html"
+                                            class="link-primary">Create your account</a></p>
+                                    <p>Login Account? <a href="#" class="link-primary login-account">Click here</a></p>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- preloader -->
+    <div class="page-preloader" role="document" id="page-preloader">
+        <div class="wrapper">
+            <div class="preloader text-center ">
+                <img src="/masacupan-valdeabella/assets/VBella.png" alt="" width="100">
+
+                <p class="text-white-50 mt-3">Just a moment, please wait... </p>
+                <div class="spinner-border spinner-border-sm text-white-50 mt-1" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/masacupan-valdeabella/assets/Toast.js-master/dist/js/Toast.js"></script>
+    <script src="/masacupan-valdeabella/scripts/backend.js"></script>
+    <script src="/masacupan-valdeabella/assets/jquery2d.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+        integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/masacupan-valdeabella/assets/quicksand.js"></script>
+    <script src="/masacupan-valdeabella/scripts/main.js"></script>
+    <script>
+        AOS.init();
+        var selectedOrder = $('input[type=radio][name=sortBy]:checked')
+        async function sortProducts(row, type, category) {
+            let target = selectedOrder.data("sort-target");
+            let sort = selectedOrder.data("sort")
+            console.log("sort: ", sort)
+            if (sort == "ascending") {
+                const products = await getProducts(category, true);
+                console.log("product sort: ", products)
+
+                $("#ascending-row").html("")
+                $("#descending-row").html("")
+                for (let product of products.data) {
+                    if (product.type.description == type) {
+                        console.log("matched type")
+                        addProductDisplay(product, $("#ascending-row"))
+                        addProductDisplay(product, $("#descending-row"))
+                    } else if (type == "all") {
+                        console.log("matched all")
+
+                        addProductDisplay(product, $("#ascending-row"))
+                        addProductDisplay(product, $("#descending-row"))
+                    }
+                }
+
+            } else {
+                const products = await getProducts(category, false);
+                console.log("product sort desc: ", products)
+
+                $("#ascending-row").html("")
+                $("#descending-row").html("")
+                for (let product of products.data) {
+                    if (product.type.description == type) {
+                        addProductDisplay(product, $("#ascending-row"))
+                        addProductDisplay(product, $("#descending-row"))
+                    } else if (type == "all") {
+                        addProductDisplay(product, $("#ascending-row"))
+                        addProductDisplay(product, $("#descending-row"))
+                    }
+                }
+            }
+
+
+            row.quicksand($(target + " .product-card"))
+        }
+
+        async function loadProducts() {
+            const products = await getProducts(3, true);
+
+            if (products.data) {
+                let row = $("#products-row");
+                //clear products row first
+                row.html("")
+
+                for (let product of products.data) {
+                    addProductDisplay(product, row)
+                    addProductDisplay(product, $("#all-row"))
+                    addProductDisplay(product, $("#ascending-row"))
+                    addProductDisplay(product, $("#descending-row"))
+
+                    if (product.type.description == "Organza") {
+                        addProductDisplay(product, $("#organza-row"))
+                    } else {
+                        addProductDisplay(product, $("#pina-row"))
+                    }
+                }
+                //sort products by price
+            } else {
+                console.log("products.error: ", products.error)
+            }
+
+            $("#products-row").siblings(".sub-preloader").addClass("closed")
+
+            closePreloader();
+        }
+        $(function () {
+            loadProducts();
+            var selectedType = $('input[type=radio][name=productType]:checked');
+            $('input[type=radio][name=productType]').on("change", async function (e) {
+                selectedType = $(this)
+                let target = $(this).data("filter-target");
+                const type = $(this).data("type")
+                //$('#products-row').quicksand($(target + " .product-card"));
+                sortProducts($('#products-row'), type, 3)
+            })
+            $('input[type=radio][name=sortBy]').on("change", async function (e) {
+                selectedOrder = $(this)
+                const checkbox = selectedType;
+                let target = checkbox.data("filter-target");
+                let type = checkbox.data("type")
+                let items = $(target + " .product-card");
+
+                if (items.length > 1) {
+                    //$('#products-row').quicksand($(target + " .product-card"));
+                    sortProducts($('#products-row'), type, 3)
+
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBella</title>
+    <link rel="shortcut icon" href="/masacupan-valdeabella/assets/VBella.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/custom.css">
+    <link rel="stylesheet" href="/masacupan-valdeabella/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.11/dark.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/masacupan-valdeabella/assets/Toast.js-master/dist/css/Toast.css">
+
+</head>
+
+<body class="bg-dark preloader-open">
+    <!-- top navbar -->
+    <div
+        class="navbar navbar-dark navbar-expand-lg bg-dark text-white shadow fixed-top flex-column w-100 main-nav pb-2">
+        <div class="container align-items-center justify-content-center ">
+
+            <a href="/masacupan-valdeabella/index.html" class="navbar-brand text-center me-lg-0 me-auto">
+                <img src="/masacupan-valdeabella/assets/VBella.png" class="img-logo" alt="">
+            </a>
+            <div class="dropdown d-block d-lg-none">
+                <a href="/masacupan-valdeabella/profile.html" class="profile-link nav-link text-white p-0"><i
+                        class="bx fs-2 bxs-user-circle"></i></a>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown" id="account-dropdown">
+                    <li>
+                        <p class="px-3 my-0 fw-bold text-dark d-flex align-items-center user-name"><i
+                                class="me-2 bx-sm bx bx-user-circle"></i> John Doe</p>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item link-dark" href="/masacupan-valdeabella/orders.html"><i class="bx bxs-truck me-2"></i>
+                            My Orders</a></li>
+                    <li><a class="dropdown-item link-dark log-out" href="#"><i class="bx bxs-log-out-circle me-2"></i>
+                            Log Out</a></li>
+                </ul>
+            </div>
+            <a href="#" role="button" data-open="false"
+                class="mobile-menu-btn d-block d-lg-none btn btn-link text-white"><i class="bx bx-menu bx-sm"></i></a>
+            <ul class="align navbar-nav flex-row flex-wrap justify-content-center d-none d-lg-flex me-lg-auto">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class="nav-link fs-6 text-uppercase text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/men.html" class=" fs-6 nav-link link-light">MEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/women.html" class="top-link nav-link link-light">WOMEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/kids.html" class=" fs-6 nav-link link-light">KIDS</a>
+                </li>
+                <!-- <li class="nav-item mx-lg-4 mx-3">
+                    <form action="#">
+                        <div class="input-group mb-3 rounded-0">
+                            <input type="text" class="form-control rounded-0" placeholder="Search..."
+                                aria-label="Text input with dropdown button">
+                            <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+                        </div>
+                    </form>
+                </li> -->
+
+            </ul>
+            <ul class="nav d-none d-lg-flex">
+                <li class="nav-item mx-lg-4 mx-3 p-0">
+                    <form action="#">
+                        <div class="input-group mb-3 rounded-0">
+                            <input type="text" class="form-control rounded-0" placeholder="Search..."
+                                aria-label="Text input with dropdown button">
+                            <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="nav flex-row d-none d-lg-flex">
+                <li class="nav-item ms-2">
+                    <div class="dropdown">
+                        <a href="/masacupan-valdeabella/profile.html" class="profile-link nav-link text-white p-0"><i
+                                class="bx fs-2 bxs-user-circle"></i></a>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown"
+                            id="account-dropdown">
+                            <li>
+                                <p class="px-3 my-0 fw-bold text-dark d-flex align-items-center user-name"><i
+                                        class="me-2 bx-sm bx bx-user-circle"></i> John Doe</p>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item link-dark" href="/masacupan-valdeabella/orders.html"><i class="bx bxs-truck me-2"></i>
+                                    My Orders</a></li>
+                            <li><a class="dropdown-item link-dark log-out" href="#"><i
+                                        class="bx bxs-log-out-circle me-2"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item ms-2">
+                    <a href="/masacupan-valdeabella/cart.html" class="nav-link text-white p-0 position-relative"><i
+                            class="bx bxs-cart fs-2"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span class="cart-items-count">0</span>
+                            <span class="visually-hidden">Items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- mobile side menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-wrapper" id="mobile-side-menu">
+        <div class="mobile-menu text-white">
+            <header class=" text-end px-2 pt-3 pb-0">
+                <a href="#" role="button" aria-open="false"
+                    class="mobile-menu-btn d-block text-end d-lg-none btn btn-link text-white"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="input-group mb-3 rounded-0 px-2">
+                <input type="text" class="form-control rounded-0" placeholder="Search..."
+                    aria-label="Text input with dropdown button">
+
+                <button class="btn btn-danger rounded-0" type="button"><i class="bx bx-search"></i></button>
+            </div>
+            <hr>
+            <p class="ms-3"><small>Categories</small></p>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/men.html" class=" fs-6 fw-bolder nav-link link-light">MEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/women.html" class="fs-6 fw-bolder nav-link link-light">WOMEN</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/kids.html" class=" fs-6 fw-bolder nav-link link-light">KIDS</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Home</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/products.html" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Products</a>
+                </li>
+
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#about"
+                        class=" nav-link fs-6 text-uppercase  main-about-link fw-bolder text-white">About</a>
+                </li>
+                <li class="nav-item mx-lg-4 mx-2">
+                    <a href="/masacupan-valdeabella/index.html#contact-us" class=" nav-link fs-6 text-uppercase fw-bolder text-white">Contact
+                        Us</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="nav flex-row justify-content-around">
+                <li class="nav-item">
+                    <div class="language-dropdown">
+                        <a class="btn btn-light btn-sm p-1 rounded-0 toggler" href="#" role="button"
+                            aria-expanded="false">
+                            <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20" alt="">
+                        </a>
+                        <ul class="bg-white position-absolute">
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+
+                                </a>
+                            </li>
+                            <li class="my-2">
+                                <a class="" href="#">
+                                    <img src="/masacupan-valdeabella/assets/PH-Philippines-Flag-icon.png" class="my-0" width="30" height="20"
+                                        alt="">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                   
+                </li> -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white p-0 position-relative"><i class="bx bxs-cart fs-2"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">Items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- filter menu -->
+    <div class="mobile-menu-wrapper" id="mobile-filter-menu">
+        <div class="mobile-menu text-white">
+            <header class="d-flex align-items-center justify-content-end px-2 pt-3 pb-0">
+                <a href="#" role="button" data-open="false" class="filter-btn link-light"><i
+                        class="bx bx-x bx-sm"></i></a>
+            </header>
+            <hr>
+            <div class="p-3">
+                <p class="fs-5 fw-bold">Filters</p>
+                <form action="#">
+                    <div class="mb-2">
+                        <p class="text-white">Product Type</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input checked data-filter-target="#all-row"
+                                    class="form-check-input form-check-danger mobile-filters" type="radio"
+                                    name="productType" id="type-sm-0">
+                                <label class="form-check-label" for="type-sm-0">
+                                    All
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+
+                            <div class="form-check">
+                                <input data-filter-target="#cocoon-row" class="form-check-input mobile-filters"
+                                    type="radio" name="productType" id="type-sm-1">
+                                <label class="form-check-label" for="type-sm-1">
+                                    Cocoon
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input data-filter-target="#silk-row" class="form-check-input mobile-filters"
+                                    type="radio" name="productType" id="type-sm-2">
+                                <label class="form-check-label" for="type-sm-2">
+                                    Piña Silk
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- main content below -->
+    <main class="">
+        <!-- cart -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="card text-dark rounded-1">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-dark">My Orders</h4>
+                        <hr>
+                        <div class="table-responsive-md">
+                            <table class="table align-middle">
+                                <thead class="shadow-sm text-secondary">
+                                  <tr>
+                                    <th class="px-lg-0 px-sm-5">#</th>
+                                    <th class="px-lg-0 px-sm-5">Product Name</th>
+                                    <th class="px-lg-0 px-sm-5">Address</th>
+                                    <th class="px-lg-0 px-sm-5">Quantity</th>
+                                    <th class="px-lg-0 px-sm-5">Price</th>
+                                    <th class="px-lg-0 px-sm-5">Date</th>
+
+                                  </tr>
+                                </thead>
+                                <tbody id="orders-tb" class="shadow-s">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- view modal -->
+                <div class="modal fade" tabindex="-1" id="view-modal">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content border-top border-dark bg-dark border-5 rounded-0 bg-light">
+                            <div class="modal-header border-0 mb-0 pb-3">
+                                <div class="text-end w-100">
+                                    <button type="button" class="btn btn-link text-white text-decoration-none "
+                                        data-bs-dismiss="modal" aria-label="Close"><i
+                                            class="bx bx-x bx-sm"></i></button>
+                                </div>
+                            </div>
+                            <div class="modal-body position-relative">
+                                <div class="sub-preloader">
+                                    <div class="content text-center">
+                                        <div class="">
+                                            <div class="spinner-border spinner-border-lg text-white-50 mt-1"
+                                                role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            <p class="text-white-50 ">Please wait... </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center gx-2 gy-3 px-3 justify-content-center">
+                                    <div class="col-lg-7 order-lg-0 order-1">
+                                        <!-- product slider -->
+                                        <div class="product-slider row align-items-center justify-content-center gy-0"
+                                            id="hero-product-slider">
+                                            <div class="col-lg-2 col-7 order-lg-0 order-1" data-aos="fade-right"
+                                                data-aos-duration="1000" data-aos-once="true">
+                                                <div style="max-height: 60vh;overflow-y:scroll"
+                                                    class="products row row-cols-lg-1 row-cols-3 justify-content-center align-items-center ">
+                                                    <div class="mb-3 placeholder">
+                                                        <a href="#" data-slide="0" class="placeholder placeholder-wave">
+                                                            <div class="card">
+                                                                <div class="card-body p-0">
+                                                                    <img src="/masacupan-valdeabella/assets/grey.png" alt=""
+                                                                        class="img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-3 placeholder">
+                                                        <a href="#" data-slide="1" class="placeholder placeholder-wave">
+                                                            <div class="card">
+                                                                <div class="card-body p-0">
+                                                                    <img src="/masacupan-valdeabella/assets/grey.png" alt=""
+                                                                        class="img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-3 placeholder">
+                                                        <a href="#" data-slide="2" class="placeholder placeholder-wave">
+                                                            <div class="card">
+                                                                <div class="card-body p-0">
+                                                                    <img src="/masacupan-valdeabella/assets/grey.png" alt=""
+                                                                        class="img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 order-lg-1 order-0">
+                                                <div class="slider" data-aos="zoom-in" data-aos-duration="800"
+                                                    data-aos-once="true">
+                                                    <div class="slides">
+                                                        <div class="slide active placeholder">
+                                                            <img src="/masacupan-valdeabella/assets/p.jpg" alt=""
+                                                                class="placeholder placeholder-wave">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg order-2" data-aos="fade-down" data-aos-once="true"
+                                        data-aos-duration="1000" data-aos-once="true">
+                                        <div class="text-white ">
+                                            <form action="#" id="add-to-cart-form">
+                                                <input type="hidden" class="user-id">
+                                                <input type="hidden" class="product-id">
+
+                                                <h2><span class="placeholder-wave placeholder col-7"></span> <span
+                                                        id="product-name"></span></h2>
+                                                <p class="text-white-50 my-1"><small><span
+                                                            class="placeholder-wave placeholder col-7"></span> <span
+                                                            id="category"></span></small>
+                                                </p>
+                                                <p class="text-light my-1"><small><span
+                                                            class="placeholder-wave placeholder col-7"></span></small>
+                                                </p>
+
+                                                <h5 class="mb-4 mt-5"><span
+                                                        class="placeholder-wave placeholder col-7"></span><span
+                                                        id="price"></span></h5>
+                                                <div class="btn-group btn-group-sm quantity-group my-1" role="group"
+                                                    aria-label="Basic example">
+                                                    <button type="button"
+                                                        class="btn btn-light fw-bold rounded-0 quantity-down"><i
+                                                            class="bi-dash fs-5"></i></button>
+                                                    <input type="number" readonly name="" min="1" id="quantity-box"
+                                                        class="form-control form-control-sm rounded-0
+                                                             text-center" value="1">
+                                                    <button type="button"
+                                                        class="btn btn-light fw-bold rounded-0 quantity-up"><i
+                                                            class="bi-plus fs-5"></i></button>
+                                                </div>
+                                                <button type="submit" class="btn btn-danger rounded-0 my-1 ms-2">ADD TO
+                                                    CART
+                                                    <i class="bi-cart-plus-fill"></i></button>
+                                            </form>
+                                            <h6 class="description-label mt-5">DESCRIPTION</h6>
+                                            <p class="mt-4 fs-6 text-center"><i><span
+                                                        class="placeholder-wave placeholder col-12"></span><span
+                                                        id="description"></span></i></p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <!-- login modal -->
+    <div class="modal fade" tabindex="-1" id="login-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-top border-dark bg-dark border-5 rounded-0 bg-light">
+                <div class="modal-header border-0 mb-0 pb-3">
+                    <div class="text-end w-100">
+                        <button type="button" class="btn btn-link text-white text-decoration-none "
+                            data-bs-dismiss="modal" aria-label="Close"><i class="bx bx-x bx-sm"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-11 login-form ">
+                            <h5 class="text-info fw-bolder mb-2">Login To My Account</h5>
+                            <p class="form-text text-white">Enter your email address and password</p>
+                            <hr>
+                            <form action="#">
+                                <input type="hidden" class="user-id">
+                                <input type="hidden" class="product-id">
+                                <div class="mb-3">
+                                    <label for="" class="form-label text-white">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="Email address...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label text-white">Password</label>
+                                    <input type="text" class="form-control" placeholder="Password...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-secondary" type="button">LOGIN</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center text-white">
+                                    <p>New customer? <a href="/masacupan-valdeabella/index.html#create-account" class="link-primary">Create
+                                            your account</a></p>
+                                    <p>Lost Password? <a href="#" class="link-primary reset-pass">Recover Password</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-11 reset-form d-none">
+                            <h5 class="text-danger fw-bolder mb-2">Recover My Password</h5>
+                            <p>Enter the email address that you use for your account</p>
+                            <hr>
+                            <form action="#">
+                                <div class="mb-3">
+                                    <label for="">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="Email address...">
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-dark" type="button">Recover Password</button>
+                                </div>
+                                <hr>
+                                <div class="mt-3 text-center">
+                                    <p>New customer? <a href="/masacupan-valdeabella/index.html#create-account" class="link-primary">Create
+                                            your account</a></p>
+                                    <p>Login Account? <a href="#" class="link-primary login-account">Click here</a></p>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- checkout modal -->
+    <div class="modal fade" tabindex="-1" id="order-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content border-top border-dark bg-dark border-5 rounded-0 bg-light">
+                <div class="modal-header border-0 m-0 p-0">
+                    <div class="text-end w-100">
+                        <button type="button" class="btn btn-link text-white text-decoration-none "
+                            data-bs-dismiss="modal" aria-label="Close"><i class="bx bx-x bx-sm"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body position-relative px-4">
+                    <div class="sub-preloader closed">
+                        <div class="content text-center">
+                            <div class="">
+                                <div class="spinner-border spinner-border-lg text-white-50 mt-1" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="text-white-50 ">Please wait... </p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#" id="order-form" method="post">
+                        <div class="text-white">
+                            <p class="fs-5 fw-bolder">Place your order</p>
+                            <hr>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Shipping Address:</label>
+                                <input type="text" class="form-control form-control-sm shipping-address">
+                            </div>
+                            <p class="fs-6 fw-bolder">Payment Info.</p>
+                            <hr>
+
+                            <div class="mb-3 mt-2">
+                                <label for="" class="form-label text-white-50"><small>Payment Method:</small></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="credit-card"
+                                        name="paymentMethod" checked id="credit-card">
+                                    <label class="form-check-label" for="credit-card">
+                                        Credit Card
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="paypal" name="paymentMethod"
+                                        id="paypal">
+                                    <label class="form-check-label" for="paypal">
+                                        Paypal
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label text-white-50"><small>Name On Card:</small></label>
+                                <input type="text" class="form-control form-control-sm">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label text-white-50"><small>Card Number:</small></label>
+                                <input type="number" class="form-control form-control-sm">
+                            </div>
+                            <hr>
+                            <div class="d-grid mt-3">
+                                <button class="btn btn-secondary btn-sm" type="submit">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- preloader -->
+    <div class="page-preloader" role="document" id="page-preloader">
+        <div class="wrapper">
+            <div class="preloader text-center ">
+                <img src="/masacupan-valdeabella/assets/VBella.png" alt="" width="100">
+
+                <p class="text-white-50 mt-3">Just a moment, please wait... </p>
+                <div class="spinner-border spinner-border-sm text-white-50 mt-1" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/masacupan-valdeabella/assets/Toast.js-master/dist/js/Toast.js"></script>
+    <script src="/masacupan-valdeabella/scripts/backend.js"></script>
+    <script src="/masacupan-valdeabella/scripts/main.js"></script>
+    <script>
+        AOS.init();
+
+        const loadOrders = async () => {
+            const user = await connection.auth.user();
+            const orders = await getOrders();
+            console.log("orders: ", orders)
+            var table = $("#orders-tb")
+            table.html("")
+            let index = 0;
+            for (let order of orders.data) {
+                for (let suborder of order.suborders) {
+                    let date = new Date(order.created_at);
+                    let row = `
+                        <tr>
+                            <td class="px-lg-0 px-sm-5">
+                                <p class="my-2 text-secondary fw-bold"><small>${++index}</small></p>
+                            </td>
+                            <td class="px-lg-0 px-sm-5">
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid" src="${suborder.products.product_images[0].src}" width="35" alt="">
+                                    <p class="ms-3 my-0 fw-bold text-secondary text-truncate">${suborder.products.name}</small></p>
+                                </div>
+                            </td>
+                            <td class="px-lg-0 px-sm-5">
+                                <p class="my-2 text-secondary fw-bold text-truncate">
+                                    <small>${order.address}</small>
+                                </p>
+                            </td>
+                          
+                            <td class="px-lg-0 px-sm-5">
+                                <p class="my-2 text-secondary fw-bold">
+                                <small>${suborder.quantity} item(s)</small>
+                                </p> 
+                            </td>
+                            <td class="px-lg-0 px-sm-5">
+                                <p class="my-2 text-secondary fw-bold">
+                                    <small>P ${numberToPrice(suborder.price * suborder.quantity)}</small>
+                                </p> 
+                            </td>
+                            <td class="px-lg-0 px-sm-5">
+                                <p class="my-2 text-secondary fw-bold">
+                                    <small>${date.getFullYear()}/${date.getMonth() < 10?"0"+date.getMonth():date.getMonth()}/${date.getDate()}</small>
+                                </p>
+                            </td>
+                            
+                         
+                           
+                        </tr>
+                        `
+                    table.append(row);
+                }
+                let row = `<tr><td colspan="6"></td></tr>`
+                table.append(row);
+
+            }
+            closePreloader();
+
+        }
+
+        $(function () {
+            loadOrders();
+        })
+    </script>
+</body>
+
+</html>
