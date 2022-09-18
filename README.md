@@ -1,4 +1,4 @@
-** VBella Embroidery
+## VBella Embroidery
                                                         
 	Vbella's Embroidery, is a business that has been innovating Men and Women's Barong attire.
     The Vbella's are consistent in seeking the desire of making Barong Tagalog and Ladies Barong,
