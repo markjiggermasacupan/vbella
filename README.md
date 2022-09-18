@@ -5,7 +5,7 @@
     well as the same kind of kiddy Barong attrire with the unique heritage apparel Vbella's innovation
     particulary in the Barong lines, have carved an enviable reputation as a trend for barong attire.
 
-FEATURING:
+###### FEATURING:
 * Homepage
 * Product Page
 * About Us
